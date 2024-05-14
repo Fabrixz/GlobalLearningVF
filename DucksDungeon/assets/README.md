@@ -1,0 +1,1 @@
+- assets provided for the website mainly of type svg
