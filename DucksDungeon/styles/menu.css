@@ -1,3 +1,18 @@
 body {
-    background-color: #BE3B3B;
-}
+    background-color: #300;
+    color: white;
+ }
+ 
+ #container {
+    max-width: 800px;
+    margin: auto;
+ }
+ 
+ .case {
+    border: 2px solid white;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+ }
+
+ 
