@@ -1,0 +1,45 @@
+body {
+    background-color: #2B0909;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    background-color: #2B0909;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    text-align: left;
+}
+
+footer p {
+    margin-left: 3rem;
+}
+
+#logofull {
+    width: 15rem;
+    margin: 1rem;
+    margin-left: 4.3rem;
+}
+
+.container {
+    background-color: #D93D3F;
+    width: 95%;
+    height: 81%;
+    margin: 0 auto;
+}
+
+
+
+#go-back {
+    width: 4.2rem;
+    margin-right: 4.3rem;
+}
+
+#EGG {
+    margin: 4vh;
+    width: 30vh;
+}
