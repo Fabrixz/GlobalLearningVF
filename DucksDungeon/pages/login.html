@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <link rel="icon" href="/DucksDungeon/assets/Logo-titulo/PatoLogo SVG.svg" type="image/x-icon">
-    <link rel="stylesheet" href="/DucksDungeon/styles/styleLogin.css">
+    <link rel="stylesheet" href="/DucksDungeon/styles/login.css">
 </head>
 <body>
     <div class="contenedor-login">
         <div class="contenedor-avatar">
-            <img src="/DucksDungeon/assets/login/DUCK-HEAD-PP 1.svg" alt="Avatar" class="avatar">
+            <img src="/DucksDungeon/assets/login/duck_rectangle.svg" alt="Avatar" class="avatar">
         </div>
+        <label for="nombre" id="text">Tu nombre:</label>
         <form id="formularioLogin">
-            <label for="nombre">Tu nombre:</label><br>
-            <input type="text" id="nombre" name="nombre"><br><br>
-            <input type="submit" value="Ingresar">
+            <input type="text" id="nombre" name="nombre">
+            <button type="submit" id="enter">
+                <img src="/DucksDungeon/assets/login/enter 1.svg" alt="" id="svg-enter">
+            </button>
         </form>
     </div>
     <script src="/DucksDungeon/script/login.js"></script>
