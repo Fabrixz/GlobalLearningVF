@@ -8,5 +8,83 @@
     <title>DucksDungeon</title>
 </head>
 <body>
+    <header>
+        <img src="/DucksDungeon/assets/Logo-titulo/duck&name-logo.svg" alt="logo de un pato" id="logofull">
+        <img src="/DucksDungeon/assets/go-back-button/go-back-1.svg" alt="boton retroceder" id="go-back">
+    </header>
+    <div class="container">
+        <div class="sub-container">
+            <div class="column-1">
+                <div class="box">
+                    <h2>INSTRUCCIONES</h2>
+                </div>
+                <div class="box">
+                    <div class="instruction">
+                        <img src="/DucksDungeon/assets/patitos-instrucciones/duck1.svg" alt="">
+                        <p>Selecciona a la madre pato
+                            a la que quieres ayudar a
+                            recuperar sus huevos.</p>
+                    </div>
+                    <div class="instruction">
+                        <img src="/DucksDungeon/assets/patitos-instrucciones/duck2.svg" alt="">
+                        <p>Para salvar los huevos, 
+                            deberás responder bien todos
+                            los acertijos y preguntas que
+                            se presenten en tu camino.</p>
+                    </div>
+                    <div class="instruction">
+                        <img src="/DucksDungeon/assets/patitos-instrucciones/duck3.svg" alt="">
+                        <p>Tendrás tiempo límite de 20
+                            segundos para seleccionar la respuesta que crees correcta.   </p>
+                    </div>
+                    <div class="instruction">
+                        <img src="/DucksDungeon/assets/patitos-instrucciones/duck4.svg" alt="">
+                        <p>Una vez finalizada el nivel,
+                            podrás devolverle los
+                            huevos a la madre pato
+                            seleccionada.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column-2">
+                <div class="boxtitle">
+                    <h2>SELECCIONA A LA MAMÁ PATO QUE QUIERES AYUDAR</h2>
+                </div>
+                <div class="container2">
+                    <div class="item">
+                        <h3>CASO 1</h3>
+                        <div class="item2">
+                            <p class="madretext">¡Mis queridos huevitos! Se los llevó un zorro travieso mientras estaba ocupada buscando comida para alimentarlos. ¡Oh, la astucia de esos depredadores!</p>
+                        <img src="/DucksDungeon/assets/mamas-pato/MamaPato1.svg" alt="" class="madre" id="svg1" data-bg-color="#D93D3F" onclick="redirectToIntro('#D93D3F')">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3>CASO 2</h3>
+                        <div class="item2">
+                            <p class="madretext">Un día, simplemente desaparecieron sin dejar rastro. ¡No sé qué pasó! Tal vez un pájaro los tomó por error o una corriente fuerte los arrastró lejos. ¡Es un misterio!</p>
+                        <img src="/DucksDungeon/assets/mamas-pato/MamaPato2.svg" alt="" class="madre" id="svg2" data-bg-color="#0E0303" onclick="redirectToIntro('#0E0303')">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3>CASO 3</h3>
+                        <div class="item2">
+                            <p class="madretext">¡Oh, mis pequeños! Mientras estaba ocupada alejando a una garza hambrienta, noté que algunos huevos habían rodado hacia el río cercano. ¡Intenté recuperarlos, pero fue demasiado tarde!</p>
+                        <img src="/DucksDungeon/assets/mamas-pato/MamaPato3.svg" alt="" class="madre" id="svg3" data-bg-color="#370A0A" onclick="redirectToIntro('#370A0A')">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3>CASO 4</h3>
+                        <div class="item2">
+                            <p class="madretext">¡Mis adorados huevitos! Fue una desgracia. Un día, un granizo repentino y furioso cayó del cielo y los rompió. ¡No pude protegerlos de la furia de la naturaleza!</p>
+                        <img src="/DucksDungeon/assets/mamas-pato/MamaPato4.svg" alt="" class="madre" id="svg4" data-bg-color="#D75253" onclick="redirectToIntro('#D75253')">
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/DucksDungeon/scripts/menu.js"></script>
 </body>
 </html>

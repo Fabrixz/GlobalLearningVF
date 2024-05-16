@@ -18,3 +18,7 @@ let nombreGuardado = localStorage.getItem('nombreUsuario');
 if (nombreGuardado) {
     console.log('Nombre guardado: ' + nombreGuardado);
 }
+
+document.getElementById('svg-enter').addEventListener('click', function() {
+    window.location.href = 'menu.html';
+})

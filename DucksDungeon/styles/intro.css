@@ -43,3 +43,17 @@ footer p {
     margin: 4vh;
     width: 30vh;
 }
+
+.borders {
+    border: 10px solid black;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.columnita1, .columnita2 {
+    flex: 1;
+}
