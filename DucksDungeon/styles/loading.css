@@ -1,0 +1,12 @@
+body {
+    background-color: #370A0A;
+    overflow: hidden;
+    display: flex;
+}
+
+#hole {
+    width: 60vh;
+    margin: 0 auto;
+}
+
+

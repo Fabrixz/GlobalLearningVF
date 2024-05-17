@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Iniciar Sesión</title>
+    <link rel="icon" href="/DucksDungeon/assets/Logo-titulo/PatoLogo SVG.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/DucksDungeon/styles/index.css">
 </head>
 <body>
-    <button>
-        hola
-    </button>
+    <div class="contenedor-login">
+        <div class="contenedor-avatar">
+            <img src="/DucksDungeon/assets/login/duck_rectangle.svg" alt="Avatar" class="avatar">
+        </div>
+        <label for="nameInput" id="text">Tu nombre:</label>
+        <form onsubmit="saveName()">
+            <input type="text" id="nameInput" name="nameInput" required>
+            <button type="submit" id="enter">
+                <img src="/DucksDungeon/assets/login/enter 1.svg" alt="" id="svg-enter">
+            </button>
+        </form>
+    </div>
+    <script src="/DucksDungeon/scripts/index.js"></script>
 </body>
 </html>

@@ -33,7 +33,7 @@ button {
     padding: 0;
 }
 
-#nombre {
+#nameInput {
     border-radius: 3px;
     background-color: #E1B2B2;
     height: 2rem;

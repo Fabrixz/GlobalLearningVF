@@ -34,6 +34,7 @@ header {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    border-radius: 10px;
 }
 
 .container .box {
@@ -49,7 +50,7 @@ header {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    margin: 4vh 18vh
+    margin: 4vh 18vh;
 }
 
 .box {
@@ -184,4 +185,17 @@ header {
 
 .madre:hover {
     cursor: pointer;
+}
+
+footer {
+    background-color: rgb(255, 49, 49);
+    padding: 1vh;
+}
+
+footer p {
+    font-family: 'IBM Plex Mono';
+    font-size: 6vh;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
 }
