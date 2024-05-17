@@ -13,9 +13,9 @@
             <img src="/DucksDungeon/assets/login/duck_rectangle.svg" alt="Avatar" class="avatar">
         </div>
         <label for="nameInput" id="text">Tu nombre:</label>
-        <form onsubmit="saveName()">
+        <form onsubmit="redirectToMenu(event)">
             <input type="text" id="nameInput" name="nameInput" required>
-            <button type="submit" id="enter">
+            <button type="submit" id="enter" onclick="redirectToMenu(event)">
                 <img src="/DucksDungeon/assets/login/enter 1.svg" alt="" id="svg-enter">
             </button>
         </form>
