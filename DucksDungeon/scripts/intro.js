@@ -1,7 +1,10 @@
+// Definimos la funcion para los botones svg que retroceden
 function goBack() {
     window.history.back();
 }
 
+// Esto toma atributos de datos personalizados del URL ya codificados (evita problemas entre carácteres
+// especiales y la funcionalidad de la URL
 document.addEventListener('DOMContentLoaded', () => {
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -11,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const encodedGoBackBtn = urlParams.get('go-back-btn');
     const encodedBtnColor = urlParams.get('btn-color');
 
+// Decodificamos los datos personalizados y los almacenamos en nuevas constantes.
     const bgColor = decodeURIComponent(encodedBgColor);
     const madrePato = "/" + decodeURIComponent(encodedMadrePato);
     const bodyColor = decodeURIComponent(encodedBodyColor);
@@ -24,8 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Go back button path: ", goBackBtn);
     console.log("Buttons color: ", btnColor);
 
-    
-
     const containerElement = document.querySelector('.container');
     const imgElement = document.getElementById('egg');
     const bodyElement = document.querySelector('body');
@@ -33,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const goBackElement = document.getElementById('go-back');
     const btnElements = document.querySelectorAll('.info-button');
 
+// Comprobamos si las constantes tienen asignado el elemento para luego setearles la propiedad deseada al dato personalizado.
     if (imgElement) {
         imgElement.src = madrePato;
     } else {
@@ -59,8 +62,18 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    // Agregando el nombre guardado en localStorage mediante elementos span en el html
     const username = localStorage.getItem('username');
     if (username) {
         document.getElementById('username').textContent = username.toUpperCase();
+    }
+
+    // Enviar al usuario al game.html al clickear "EMPEZAR"
+    const startGameElement = document.querySelector('h2.startGame');
+
+    if (startGameElement) {
+        startGameElement.addEventListener('click', () => {
+            window.location.href = 'game.html';
+        })
     }
 });
