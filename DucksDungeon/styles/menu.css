@@ -1,18 +1,201 @@
-body {
-    background-color: #300;
-    color: white;
- }
- 
- #container {
-    max-width: 800px;
-    margin: auto;
- }
- 
- .case {
-    border: 2px solid white;
-    padding: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
- }
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
- 
+h2, h3 {
+    margin: 0 auto;
+}
+
+body {
+    background-color: #000000;
+    margin: 0 auto;
+}
+
+header {
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logofull {
+    width: 15rem;
+    margin: 1rem;
+    margin-left: 4.3rem;
+}
+
+#go-back {
+    width: 4.2rem;
+    margin-right: 4.3rem;
+}
+
+.container {
+    background-color: #D93D3F;
+    width: 95%;
+    height: 81%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.container .box {
+    width: inherit;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.sub-container {
+    background-color: #D93D3F;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin: 4vh 18vh;
+}
+
+.box {
+    flex: 1;
+    margin-bottom: 10px;
+    width: fit-content;
+    border: 1px solid #1E1E1E;
+    margin-right: 10vh;
+    background-color: #862526;
+}
+
+.boxtitle {
+    margin-bottom: 10px;
+    background-color: #862526;
+    border: 3px solid #1E1E1E;
+    border-radius: 5px;
+}
+
+.column-1 {
+    flex: 1;
+    margin-top: 1%;
+}
+
+.column-1 .box {
+    border: 3px solid #1E1E1E;
+    border-radius: 5px;
+}
+
+.column-1 .box:has(h2) {
+    border: 3px solid #1E1E1E;
+    border-radius: 5px;
+    height: 5vh;
+}
+
+.column-1 h2 {
+    color: #1E1E1E;
+    font-family: "IBM Plex Mono";
+}
+
+.column-2 {
+    flex: 2;
+    margin-top: 1%;
+}
+
+.column-2 h2 {
+    color: #1E1E1E;
+    font-family: "IBM Plex Mono";
+}
+
+.borders {
+    border: 1px solid black;
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.columnita1 {
+    flex: 1;
+    margin-right: 20vh;
+}
+
+.item {
+    flex-basis: 50%; /* cada div ocupa tal % del padre*/
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+.item2 {
+    background-color: #862526;
+    padding: 1vh;
+    border: 3px solid #1E1E1E;
+    border-radius: 5px;
+    height: fit-content;
+    font-family: "IBM Plex Mono";
+    font-size: medium;
+    font-weight: 530;
+    display: flex;
+    margin-top: 0.6vh;
+}
+
+.madretext {
+    font-family: "IBM Plex Mono";
+    font-size: fit-content;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* TITULOS "CASOS N°" */
+.container2 h3 {
+    color: #1E1E1E;
+    font-family: "IBM Plex Mono";
+    border: 3px solid #1E1E1E;
+    border-radius: 5px;
+    text-align: center;
+    width: inherit;
+    background-color: #862526;
+}
+
+/* PATITOS INSTRUCTIVOS CON N° */
+.instruction img {
+    width: 9vh;
+    height: auto;
+}
+
+.instruction p {
+    background-color: #1E1E1E;
+    color: white;
+    width: 30vh;
+    padding: 1vh;
+    border-radius: 5%;
+    margin-left: 3vh;
+}
+
+.instruction {
+    display: flex;
+    justify-content: center;
+    margin: 1.5vh;
+}
+
+
+.madre {
+    height: fit-content;
+    align-self: flex-end;
+}
+
+.madre:hover {
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgb(255, 49, 49);
+    padding: 1vh;
+}
+
+footer p {
+    font-family: 'IBM Plex Mono';
+    font-size: 6vh;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 body {
     background-color: #2B0909;
     margin: 0 auto;
@@ -11,13 +13,7 @@ header {
     justify-content: space-between;
 }
 
-footer {
-    text-align: left;
-}
 
-footer p {
-    margin-left: 3rem;
-}
 
 #logofull {
     width: 15rem;
@@ -25,21 +21,78 @@ footer p {
     margin-left: 4.3rem;
 }
 
-.container {
-    background-color: #D93D3F;
-    width: 95%;
-    height: 81%;
-    margin: 0 auto;
-}
 
 
 
 #go-back {
     width: 4.2rem;
     margin-right: 4.3rem;
+    cursor: pointer;
 }
 
-#EGG {
+
+.container {
+    display: flex;
+    width: 90%;
+    height: 81%;
+    margin: 0 auto;
+    border-radius: 9px;
+}
+
+#egg {
     margin: 4vh;
     width: 30vh;
+    margin-right: 0;
 }
+
+.column {
+    display: inline-block;
+    flex: 1;
+    margin: 0 !important;
+}
+
+.column h2 {
+    padding: 2vh;
+    margin: 3vh auto;
+    color: #D9D9D9;
+    font-family: "IBM Plex Mono";
+    text-align: center;
+    font-size: 2.6vh;
+    border-radius: 14px;
+    border: 3px solid #D9D9D9;
+    width: 38vh;
+    background-image: url(/DucksDungeon/assets/burbuja-texto/huevito.svg);
+    background-repeat: no-repeat;
+    background-size: 2.5vh;
+    background-position-x: 2vh;
+    background-position-y: center;
+}
+
+h2.startGame {
+    background-image: url(/DucksDungeon/assets/burbuja-texto/PLAY\ 1.svg);
+    background-size: 5.5vh;
+}
+
+h2.obstacle {
+    background-image: url(/DucksDungeon/assets/burbuja-texto/OBSTACLE.svg);
+    background-size: 4.2vh;
+}
+
+#bubble {
+    width: 50vh;
+}
+
+.container p {
+    background-color: #D9D9D9;
+    padding: 1vh 8vh;
+    border-radius: 50px;
+    width: 40vh;
+    font-family: 'IBM Plex Mono';
+    font-weight: bold;
+    margin: 2vh auto;
+}
+
+h2:hover {
+    background-color: #c803036b !important;
+}
+
