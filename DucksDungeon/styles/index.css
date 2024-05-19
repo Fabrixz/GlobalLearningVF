@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-/* Restablecer algunos estilos predeterminados */
 html, body {
     margin: 0;
     padding: 0;
@@ -9,7 +8,6 @@ html, body {
     overflow: hidden;
 }
 
-/* Estilos del contenedor de inicio de sesión */
 .contenedor-login {
     display: flex;
     flex-direction: column;
@@ -49,11 +47,11 @@ button {
 
 #enter:hover {
     cursor: pointer;
+    animation: increaseSize 7s;
 }
 
 #svg-enter {
     height: 2.3rem;
-    margin-left: 0.4rem;
 }
 
 #formularioLogin {
@@ -72,4 +70,24 @@ button {
 
 .contenedor-avatar {
     margin-top: -10rem;
+}
+
+.contenedor-avatar:not(#enter) {
+    animation: increaseSize 20s infinite;
+}
+
+form input {
+    vertical-align: top;
+}
+
+@keyframes increaseSize {
+    0% {
+        transform: scale(1.01);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

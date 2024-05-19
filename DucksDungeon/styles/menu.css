@@ -20,11 +20,7 @@ header {
     width: 15rem;
     margin: 1rem;
     margin-left: 4.3rem;
-}
-
-#go-back {
-    width: 4.2rem;
-    margin-right: 4.3rem;
+    animation: increaseSize 1.5s infinite
 }
 
 .container {
@@ -171,6 +167,12 @@ header {
     margin-left: 3vh;
 }
 
+.instruction p:hover {
+    transition: transform 1s;
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 .instruction {
     display: flex;
     justify-content: center;
@@ -185,6 +187,7 @@ header {
 
 .madre:hover {
     cursor: pointer;
+    animation: increaseSize 1s infinite;
 }
 
 footer {
@@ -198,4 +201,13 @@ footer p {
     font-weight: bolder;
     text-align: center;
     color: white;
+}
+
+@keyframes increaseSize {
+    from {
+        transform: scale(1.01);
+    }
+    to {
+        transform: scale(1.0);
+    }
 }

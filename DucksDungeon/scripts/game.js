@@ -1,3 +1,32 @@
+const urlParams = new URLSearchParams(window.location.search);
+// Storing encoded params
+const encodedDivColor = encodeURIComponent(urlParams.get('div-color'));
+const encodedHeaderColor = encodeURI(urlParams.get('header-color'));
+const encodedBtnColor = encodeURI(urlParams.get('btn-color'));
+
+// Decoding and storing params
+const divColor = decodeURIComponent(encodedDivColor);
+const headerColor = decodeURIComponent(encodedHeaderColor);
+const btnColor = decodeURIComponent(encodedBtnColor);
+console.log(headerColor)
+console.log(divColor)
+console.log(btnColor)
+
+
+// Selecting elements
+const bodyElement = document.querySelector('body');
+const headerElement = document.querySelector('header');
+const containerElement = document.getElementById('container');
+const buttonsElements = document.querySelectorAll('h2, .button-color')
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    bodyElement.style.backgroundColor = headerColor;
+    headerElement.style.backgroundColor = headerColor;
+    containerElement.style.backgroundColor = divColor;
+    buttonsElements.forEach(buttonElement => buttonElement.style.backgroundColor = btnColor)
+})
+
 const questions = [
     {
         question: "¿Cuál es el siguiente número de la secuencia:  2, 4, 8, 16, ...?",
@@ -245,16 +274,16 @@ const questions = [
 ]
 
 
-questions.forEach(question => console.log(question.question))
+// questions.forEach(question => console.log(question.question))
 
-function getRandomQuestion() {
-    const randomIndex = Math.floor(Math.random() * questions.length);
-    return questions[randomIndex];
-}
+// function getRandomQuestion() {
+//     const randomIndex = Math.floor(Math.random() * questions.length);
+//     return questions[randomIndex];
+// }
 
-const randomQuestion = getRandomQuestion();
-console.log(randomQuestion.question);
+// const randomQuestion = getRandomQuestion();
+// console.log(randomQuestion.question);
 
-randomQuestion.answers.forEach(answer => {
-    console.log(answer.text);
-});
+// randomQuestion.answers.forEach(answer => {
+//     console.log(answer.text);
+// });

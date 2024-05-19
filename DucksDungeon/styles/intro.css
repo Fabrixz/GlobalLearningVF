@@ -30,6 +30,11 @@ header {
     cursor: pointer;
 }
 
+#go-back:hover {
+    cursor: pointer;
+    animation: increaseSize 0.2s forwards; 
+
+}
 
 .container {
     display: flex;
@@ -43,6 +48,11 @@ header {
     margin: 4vh;
     width: 30vh;
     margin-right: 0;
+}
+
+#egg:hover {
+    animation: scaleAndShake 3s infinite; 
+
 }
 
 .column {
@@ -73,6 +83,7 @@ h2.startGame {
     background-size: 5.5vh;
 }
 
+
 h2.obstacle {
     background-image: url(/DucksDungeon/assets/burbuja-texto/OBSTACLE.svg);
     background-size: 4.2vh;
@@ -96,3 +107,52 @@ h2:hover {
     background-color: #c803036b !important;
 }
 
+.startGame:hover {
+    animation: increaseSize 0.5s forwards; 
+
+}
+
+@keyframes increaseSize {
+    from {
+        transform: scale(1.01);
+    }
+    to {
+        transform: scale(1.03);
+    }
+}
+
+@keyframes scaleAndShake {
+    0% {
+        transform: scale(1) translateX(0) rotate(0deg);
+    }
+    10% {
+        transform: scale(1.03) translateX(-10px) rotate(-45deg);
+    }
+    20% {
+        transform: scale(1.03) translateX(10px) rotate(45deg);
+    }
+    30% {
+        transform: scale(1.03) translateX(-10px) rotate(-45deg);
+    }
+    40% {
+        transform: scale(1.03) translateX(10px) rotate(45deg);
+    }
+    50% {
+        transform: scale(1.03) translateX(-10px) rotate(-45deg);
+    }
+    60% {
+        transform: scale(1.03) translateX(10px) rotate(45deg);
+    }
+    70% {
+        transform: scale(1.03) translateX(-10px) rotate(-45deg);
+    }
+    80% {
+        transform: scale(1.03) translateX(10px) rotate(45deg);
+    }
+    90% {
+        transform: scale(1.03) translateX(-10px) rotate(-45deg);
+    }
+    100% {
+        transform: scale(1.03) translateX(0) rotate(0deg);
+    }
+}

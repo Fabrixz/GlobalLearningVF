@@ -1,3 +1,10 @@
+const urlParams = new URLSearchParams(window.location.search);
+const encodedBgColor = urlParams.get('bg-color');
+const encodedMadrePato = urlParams.get('madre-pato');
+const encodedBodyColor = urlParams.get('body-color');
+const encodedGoBackBtn = urlParams.get('go-back-btn');
+const encodedBtnColor = urlParams.get('btn-color');
+
 // Definimos la funcion para los botones svg que retroceden
 function goBack() {
     window.history.back();
@@ -7,13 +14,6 @@ function goBack() {
 // especiales y la funcionalidad de la URL
 document.addEventListener('DOMContentLoaded', () => {
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const encodedBgColor = urlParams.get('bg-color');
-    const encodedMadrePato = urlParams.get('madre-pato');
-    const encodedBodyColor = urlParams.get('body-color');
-    const encodedGoBackBtn = urlParams.get('go-back-btn');
-    const encodedBtnColor = urlParams.get('btn-color');
-
 // Decodificamos los datos personalizados y los almacenamos en nuevas constantes.
     const bgColor = decodeURIComponent(encodedBgColor);
     const madrePato = "/" + decodeURIComponent(encodedMadrePato);
@@ -21,12 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const goBackBtn = "/" + decodeURIComponent(encodedGoBackBtn);
     const btnColor = decodeURIComponent(encodedBtnColor);
 
-    console.log("Madre pato svg path: ", madrePato);
-    console.log("Container background color: ", bgColor);
-    console.log("Body background color: ", bodyColor);
-    console.log("Header background color: ", bodyColor);
-    console.log("Go back button path: ", goBackBtn);
-    console.log("Buttons color: ", btnColor);
+    // console.log("Madre pato svg path: ", madrePato);
+    // console.log("Container background color: ", bgColor);
+    // console.log("Header background color: ", bodyColor);
+    // console.log("Go back button path: ", goBackBtn);
+    // console.log("Buttons color: ", btnColor);
 
     const containerElement = document.querySelector('.container');
     const imgElement = document.getElementById('egg');
@@ -57,9 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (btnElements) {
-        btnElements.forEach(function(btnElement) {
-            btnElement.style.backgroundColor = btnColor;
-        })
+        btnElements.forEach(btnElement => btnElement.style.backgroundColor = btnColor)
     }
 
     // Agregando el nombre guardado en localStorage mediante elementos span en el html
@@ -68,12 +65,20 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('username').textContent = username.toUpperCase();
     }
 
-    // Enviar al usuario al game.html al clickear "EMPEZAR"
-    const startGameElement = document.querySelector('h2.startGame');
 
+
+    // Enviar al usuario al game.html al clickear "EMPEZAR"
+    // Comenté esto porque creo que hay una mejor forma. Con el onclick en el h2, y le paso al función con atributos.
+    const startGameElement = document.querySelector('h2.startGame');
     if (startGameElement) {
         startGameElement.addEventListener('click', () => {
-            window.location.href = 'game.html';
+
+            const divColor = encodeURIComponent(bgColor)
+            const headerColor = encodeURIComponent(bodyColor)
+            const btnGame = encodeURIComponent(btnColor)
+            window.location.href = `game.html?&div-color=${divColor}&header-color=${headerColor}&btn-color=${btnGame}`;
         })
     }
+
+
 });

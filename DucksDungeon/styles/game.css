@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+* {
+    font-family: 'IBM Plex Mono';
+}
+
 
 body {
-    background-color: gray;
+    background-color: rgb(255, 109, 109);
     margin: 0;
 }
 
 nav {
-    background-color: rgb(36, 36, 36);
     width: 100%;
-    margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-between;
@@ -22,6 +24,84 @@ nav h2 {
     border: 3px solid #D9D9D9;
     font-family: 'IBM Plex Mono';
     font-weight: bolder;
-    font-size: 3.5vh;
+    font-size: 2.4vh;
     margin: 2vh 4vh;
+    color: #D9D9D9;
+}
+
+nav h1 {
+    background-color: pink;
+    padding: 2vh;
+    width: 70%;
+    border-radius: 3vh;
+    border: 3px solid #D9D9D9;
+    font-family: 'IBM Plex Mono';
+    font-weight: bolder;
+    font-size: 3.5vh;
+    margin: 0 auto;
+    color: #D9D9D9;
+    text-align: center;
+}
+
+#logofull {
+    width: 15rem;
+    margin: 1rem;
+    margin-left: 4.3rem;
+}
+
+
+#container {
+    margin: 0 8vh;
+    border-radius: 10px;
+    height: 80vh;
+}
+
+.options {
+    flex-direction: column;
+    margin: 3vh;
+
+}  
+
+.option {
+    margin: 1vh auto;
+
+}
+
+.optionumber {
+    display: inline-block;
+    margin: 0;
+    font-size: 3vh;
+    font-weight: bolder;
+    border-radius: 10vh;
+    border: 0.6vh solid white; 
+    padding: 1vh 2vh;
+}
+
+
+.optioncontent {
+    display: inline-block;
+    margin: 0vh 2vh;
+    width: 50vh;
+    
+}
+
+.optioncontent:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.336) !important;
+    animation: increaseSize 0.5s forwards; 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.question {
+    margin: 2vh auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@keyframes increaseSize {
+    from {
+        transform: scale(1.01);
+    }
+    to {
+        transform: scale(1.03);
+    }
 }
