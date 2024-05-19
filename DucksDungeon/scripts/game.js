@@ -234,15 +234,19 @@ const questions = [
 
     
 // Funcion para obtener una pregunta aleatoria
-
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
 const alreadyPickedQuestions = [];
 function getRandomQuestion() {
     const randomIndex = Math.floor(Math.random() * questions.length);
     if (alreadyPickedQuestions.includes(randomIndex)) {
-        getRandomQuestion();
+        console.warn("this question has already been selected, therefore I getRandomInt(18) to the index. Good luck!");
+        let newRandom = getRandomInt(18);
+        alreadyPickedQuestions.push(newRandom);
+        return questions[newRandom];
     } else {
         alreadyPickedQuestions.push(randomIndex);
-        console.log(alreadyPickedQuestions);
         return questions[randomIndex];
     }
 }
@@ -299,6 +303,7 @@ function startGame() {
 
         // Se inicia el contador
         startTimer();
+        console.log(alreadyPickedQuestions)
         
         optionContentElements.forEach(option => {
             option.addEventListener('click', (event) => {
