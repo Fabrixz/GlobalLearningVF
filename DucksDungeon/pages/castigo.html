@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Juego de Clics Mejorado</title>
+<link rel="stylesheet" href="/DucksDungeon/styles/castigo.css">
+</head>
+<body>
+<div id="contenedorJuego">
+    <img id="imagenSuperior" src="imagen.jpg" alt="Imagen Superior">
+    <div id="areaClic" onclick="contarClics()"></div>
+    <div id="contenedoresInferiores">
+        <div id="contadorClics">0</div>
+        <div id="contadorTiempo">25</div>
+    </div>
+</div>
+<video id="susto" width="400" style="display:none;">
+  <source src="susto.mp4" type="video/mp4">
+  Tu navegador no soporta video HTML5.
+</video>
+<script src="/DucksDungeon/scripts/castigo.js"></script>
+</body>
+</html>
