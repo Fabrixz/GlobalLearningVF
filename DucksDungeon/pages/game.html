@@ -13,31 +13,58 @@
     </header>
     <div id="container">
         <nav>
-            <h2 class="button-color">TIEMPO RESTANTE: </h2>
-            <h2 class="button-color">HUEVOS RECUPERADOS: </h2>
+            <h2 class="button-color">TIEMPO RESTANTE: <span id="timer">15</span></h2>
+            <h2 class="button-color">HUEVOS RECUPERADOS: <span id="recovered-eggs">0</span></h2>
         </nav>
         <nav>
-            <h1 class="button-color question">PREGUNTA</h1>
+            <h1 class="button-color question">********</h1>
         </nav>
         <nav class="options">
             <div class="option">
                 <h2 class="optionumber">A</h2>
-                <h2 class="optioncontent">that is so blueeee</h2>
+                <h2 class="optioncontent" data-number="0">********</h2>
             </div>
             <div class="option">
                 <h2 class="optionumber">B</h2>
-                <h2 class="optioncontent">that is so dsdsdsdsdsdblueeee</h2>
+                <h2 class="optioncontent" data-number="1">********</h2>
             </div>
             <div class="option">
                 <h2 class="optionumber">C</h2>
-                <h2 class="optioncontent">that is so blueeee</h2>
+                <h2 class="optioncontent" data-number="2">********</h2>
             </div>
             <div class="option">
                 <h2 class="optionumber">D</h2>
-                <h2 class="optioncontent">that is so blueeee</h2>
+                <h2 class="optioncontent" data-number="3">********</h2>
             </div>
         </nav>
-    </div>
+        <div id="timer-overlay" class="hidden">
+            <div class="overlay-content">
+                <h2>¡TE QUEDASTE SIN TIEMPO!</h2>
+                <p>No te llevas ningun huevo...</p>
+                <button id="back-to-menu" onclick=goBackToMenu()>Go to Menu</button>
+            </div>
+        </div>
+        <div id="start-overlay">
+            <div class="overlay-content">
+                <h2>APRETA EL BOTÓN PARA EMPEZAR.</h2>
+                <p>¡MUY BUENA SUERTE!</p>
+                <button id="close-overlay" onclick=closeOverlay()>¡VAMOS!</button>
+            </div>
+        </div>
+        <div id="wrong-overlay" class="hidden">
+            <div class="overlay-content">
+                <h2>¡INCORRECTO!</h2>
+                <p>¿DESEAS SEGUIR?</p>
+                <button id="back-to-menu" onclick=goBackToMenu()>SIGUIENTE</button>
+            </div>
+        </div>
+        <div id="correct-overlay" class="hidden">
+            <div class="overlay-content">
+                <h2>¡CORRECTO!</h2>
+                <p>¡SIGUE JUGANDO!</p>
+                <button id="back-to-menu" onclick=goBackToMenu()>SIGUIENTE</button>
+            </div>
+        </div>
     <script src="/DucksDungeon/scripts/game.js"></script>
 </body>
 </html>

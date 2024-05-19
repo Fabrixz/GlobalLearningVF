@@ -45,9 +45,9 @@ header {
 }
 
 #egg {
-    margin: 4vh;
+    margin: 3vh auto;
     width: 30vh;
-    margin-right: 0;
+    display: flex;
 }
 
 #egg:hover {
@@ -61,7 +61,7 @@ header {
     margin: 0 !important;
 }
 
-.column h2 {
+h2 {
     padding: 2vh;
     margin: 3vh auto;
     color: #D9D9D9;

@@ -1,5 +1,5 @@
 let clics = 0;
-let tiempo = 25;
+let tiempo = 10;
 let intervalo;
 
 document.addEventListener("DOMContentLoaded", function() {
