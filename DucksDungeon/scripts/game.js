@@ -4,6 +4,7 @@ var timerInterval;
 function startTimer() {
     var seconds = 15;
     const timerElement = document.getElementById('timer');
+    timerElement.textContent = seconds;
     const timerOverlay = document.getElementById('timer-overlay');
 
     timerInterval = setInterval(() => {
@@ -26,20 +27,18 @@ function stopTimer() {
 const closeOverlay = () => document.getElementById('start-overlay').style.display = 'none';
 const goBackToMenu = () => window.location.href = 'menu.html';
 
-
 // Storing encoded params
 const urlParams = new URLSearchParams(window.location.search);
 const encodedDivColor = encodeURIComponent(urlParams.get('div-color'));
 const encodedHeaderColor = encodeURI(urlParams.get('header-color'));
 const encodedBtnColor = encodeURI(urlParams.get('btn-color'));
 
+
 // Decoding and storing params
 const divColor = decodeURIComponent(encodedDivColor);
 const headerColor = decodeURIComponent(encodedHeaderColor);
 const btnColor = decodeURIComponent(encodedBtnColor);
-console.log(headerColor)
-console.log(divColor)
-console.log(btnColor)
+
 
 
 // Selecting elements
@@ -233,19 +232,20 @@ const questions = [
         ]
     }]
 
+    
 // Funcion para obtener una pregunta aleatoria
+
+const alreadyPickedQuestions = [];
 function getRandomQuestion() {
     const randomIndex = Math.floor(Math.random() * questions.length);
-    return questions[randomIndex];
+    if (alreadyPickedQuestions.includes(randomIndex)) {
+        getRandomQuestion();
+    } else {
+        alreadyPickedQuestions.push(randomIndex);
+        console.log(alreadyPickedQuestions);
+        return questions[randomIndex];
+    }
 }
-
-// Declaro selector
-var optionNumber = 0;
-function sendNumber(number) {
-    optionNumber = number;
-    console.log(optionNumber)
-}
-
 
 // Función para recuperar huevos
 var recoveredEggs = 0;
@@ -254,50 +254,82 @@ function recoverEgg() {
     console.log(recoveredEggs);
     const recoveredEggsElement = document.getElementById('recovered-eggs');
     recoveredEggsElement.textContent = recoveredEggs;
+    localStorage.setItem('RecoveredEggs', recoveredEggs)
 }
 
 // JUEGO LÓGICA
 
-function startGame() {
-    // Obtengo pregunta aleatoria y la guardo
-    const randomQuestion = getRandomQuestion();
-    // Se asignan las preguntas
-    const questionElement = document.querySelector('.question');
-    const randomQuestionAnswers = randomQuestion.answers;
-    const optionContentElements = document.querySelectorAll('.optioncontent');
-    const optionElements = document.querySelectorAll('.options');
-    const [option1, option2, option3, option4] = optionContentElements;
-    questionElement.textContent = randomQuestion.question;
-    option1.textContent = randomQuestion.answers[0].text[0];
-    option2.textContent = randomQuestion.answers[1].text[0];
-    option3.textContent = randomQuestion.answers[2].text[0];
-    option4.textContent = randomQuestion.answers[3].text[0];
-
-    // creo lista con el valor de cada opcion
-    var booleanList = []
-    randomQuestion.answers.forEach((listOfAnswers) => {
-        booleanList.push(listOfAnswers.text[1]);
-    })
-    // Se inicia el contador
-    startTimer();
-    
-    optionContentElements.forEach(option => {
-        option.addEventListener('click', (event) => {
-            const number = event.target.dataset.number;
-            if (booleanList[number] === true) {
-                recoverEgg();
-                stopTimer();
-                event.target.style.backgroundColor = 'green';
-                correctOverlay.classList.remove('hidden');
-            } else {
-                stopTimer();
-                event.target.style.backgroundColor = 'red';
-                wrongOverlay.classList.remove('hidden');
-            }
-        })
-    })
-
+function nextQuestion() {
+    correctOverlay.classList.add('hidden');
+    startGame();
 }
+
+const obstaclesElement = document.getElementById('obstacleCountDecrease');
+const obstacles = encodeURI(urlParams.get('obstacles'));
+var obstacleCountDecrease = parseInt(obstacles, 10);
+
+function startGame() {
+
+    if (obstacleCountDecrease>0) {
+        obstaclesElement.textContent = obstacleCountDecrease;
+        console.log("The type of obstacles is: ", typeof obstacleCountDecrease);
+        // Obtengo pregunta aleatoria y la guardo
+        const randomQuestion = getRandomQuestion();
+        // Se asignan las preguntas
+        const questionElement = document.querySelector('.question');
+        const randomQuestionAnswers = randomQuestion.answers;
+        const optionContentElements = document.querySelectorAll('.optioncontent');
+        const optionElements = document.querySelectorAll('.options');
+        const [option1, option2, option3, option4] = optionContentElements;
+        questionElement.textContent = randomQuestion.question;
+        option1.textContent = randomQuestion.answers[0].text[0];
+        option2.textContent = randomQuestion.answers[1].text[0];
+        option3.textContent = randomQuestion.answers[2].text[0];
+        option4.textContent = randomQuestion.answers[3].text[0];
+
+
+
+        // creo lista con el valor de cada opcion
+        var booleanList = []
+        randomQuestion.answers.forEach((answers) => {
+            booleanList.push(answers.text[1]);
+            console.log(answers)
+        })
+
+
+        // Se inicia el contador
+        startTimer();
+        
+        optionContentElements.forEach(option => {
+            option.addEventListener('click', (event) => {
+                const number = event.target.dataset.number;
+                if (booleanList[number] === true) {
+                    recoverEgg();
+                    stopTimer();
+                    obstacleCountDecrease--;
+                    event.target.style.animation = 'green 1s ease forwards';
+                    correctOverlay.classList.remove('hidden');
+                    optionContentElements.forEach(option => {
+                        const newOption = option.cloneNode(true);
+                        option.parentNode.replaceChild(newOption, option);
+                    });
+                } else {
+                    stopTimer();
+                    event.target.style.backgroundColor = 'red';
+                    wrongOverlay.classList.remove('hidden');
+                    console.log("POR ALGUNA RAZON SE ACTIVÓ...");
+                }
+            })
+        })
+    } else {
+        obstaclesElement.textContent = obstacleCountDecrease;
+        const EggsSpanElement = document.querySelector('.collected-eggs');
+        const congratsElement = document.getElementById('congrats-overlay');
+        EggsSpanElement.textContent = recoveredEggs;
+        congratsElement.classList.remove('hidden');
+        console.log(`FINALIZASTE!!! HUEVOS RECUPERADOS: ${recoveredEggs}`)
+    }
+    }
 
 
 

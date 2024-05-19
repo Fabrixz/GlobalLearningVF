@@ -10,6 +10,7 @@ const encodedMadrePato = urlParams.get('madre-pato');
 const encodedBodyColor = urlParams.get('body-color');
 const encodedGoBackBtn = urlParams.get('go-back-btn');
 const encodedBtnColor = urlParams.get('btn-color');
+const encodedObstacles = urlParams.get('obstacles');
 
 document.addEventListener('DOMContentLoaded', () => {
 // Decodificamos los datos personalizados y los almacenamos.
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bodyColor = decodeURIComponent(encodedBodyColor);
     const goBackBtn = "/" + decodeURIComponent(encodedGoBackBtn);
     const btnColor = decodeURIComponent(encodedBtnColor);
+    const obstacles = decodeURIComponent(encodedObstacles);
 
 // Seleccionamos elementos
     const containerElement = document.querySelector('.container');
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerIntro = document.querySelector('header');
     const goBackElement = document.getElementById('go-back');
     const btnElements = document.querySelectorAll('.info-button');
+    const obstacleCounter = document.getElementById('obstacles');
 
 // Asignando datos personalizados.
     imgElement.src = madrePato;
@@ -33,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bodyElement.style.backgroundColor = bodyColor;
     headerIntro.style.backgroundColor = bodyColor;
     goBackElement.src = goBackBtn;
+    obstacleCounter.textContent = Number(obstacles);
     btnElements.forEach(btnElement => btnElement.style.backgroundColor = btnColor)
     
 // Agregando el nombre guardado en localStorage mediante elementos span en el html
@@ -49,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const divColor = encodeURIComponent(bgColor)
             const headerColor = encodeURIComponent(bodyColor)
             const btnGame = encodeURIComponent(btnColor)
-            window.location.href = `game.html?&div-color=${divColor}&header-color=${headerColor}&btn-color=${btnGame}`;
+            const obstaclesNum = encodeURIComponent(obstacles)
+            window.location.href = `game.html?&div-color=${divColor}&header-color=${headerColor}&btn-color=${btnGame}&obstacles=${obstaclesNum}`;
         })
     }
 

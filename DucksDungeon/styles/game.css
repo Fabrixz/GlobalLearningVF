@@ -106,7 +106,7 @@ nav h1 {
     }
 }
 
-#start-overlay, #timer-overlay, #correct-overlay, #wrong-overlay {
+#start-overlay, #timer-overlay, #correct-overlay, #wrong-overlay, #congrats-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -172,4 +172,13 @@ p {
     font-size: 16px;
     margin-top: 1rem;
     cursor: pointer;
+}
+
+@keyframes green {
+    0% {
+        background-color: green;
+    }
+    100% {
+        background-color: transparent;
+    }
 }

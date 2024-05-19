@@ -14,6 +14,7 @@
     <div id="container">
         <nav>
             <h2 class="button-color">TIEMPO RESTANTE: <span id="timer">15</span></h2>
+            <h2 class="button-color">OBSTÁCULOS RESTANTES: <span id="obstacleCountDecrease">0</span></h2>
             <h2 class="button-color">HUEVOS RECUPERADOS: <span id="recovered-eggs">0</span></h2>
         </nav>
         <nav>
@@ -62,7 +63,14 @@
             <div class="overlay-content">
                 <h2>¡CORRECTO!</h2>
                 <p>¡SIGUE JUGANDO!</p>
-                <button id="back-to-menu" onclick=goBackToMenu()>SIGUIENTE</button>
+                <button id="back-to-menu" onclick=nextQuestion()>SIGUIENTE</button>
+            </div>
+        </div>
+        <div id="congrats-overlay" class="hidden">
+            <div class="overlay-content">
+                <h2>¡FELICITACIONES!</h2>
+                <p>¡HAS RECUPERADO <span class="collected-eggs"></span> HUEVOS!</p>
+                <button id="back-to-menu" onclick=goBackToMenu()>VOLVER A MENU</button>
             </div>
         </div>
     <script src="/DucksDungeon/scripts/game.js"></script>
