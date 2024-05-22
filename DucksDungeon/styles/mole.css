@@ -73,8 +73,8 @@ body {
 .buttons button {
   padding: 15px 45px;
   background-color: inherit;
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid #5f1a1a;
+  color: #3d0b0b;
   border-radius: 3px;
   outline: none;
 }
