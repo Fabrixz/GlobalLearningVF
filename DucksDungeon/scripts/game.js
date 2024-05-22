@@ -1,6 +1,23 @@
 // timer
 var timerInterval;
 
+function lifeChecker(){
+    const playedGameOne = localStorage.getItem("playedGameOne")
+    const playedGameTwo = localStorage.getItem("playedGameTwo")
+    if (!playedGameOne) {
+        
+        window.location.href = 'castigo.html'
+        return
+    }
+    if (!playedGameTwo) {
+        window.location.href = 'mole.html'
+        //to do: redirigir al juego castigo 2
+        return
+    }
+    //to do:redigirir a screamer luego a index 
+    window.open("screamer.yt/", "_blank");
+    window.location.href = 'index.html'
+}
 function startTimer() {
     var seconds = 15;
     const timerElement = document.getElementById('timer');
@@ -13,6 +30,7 @@ function startTimer() {
         if (seconds === 0) {
             clearInterval(timerInterval);
             timerOverlay.classList.remove('hidden');
+            lifeChecker()
         }
     }, 1000)
 }
@@ -252,7 +270,9 @@ function getRandomQuestion() {
 }
 
 // Función para recuperar huevos
-var recoveredEggs = 0;
+var recoveredEggs = localStorage.getItem("RecoveredEggs")|| 0;
+const recoveredEggsElement = document.getElementById('recovered-eggs');
+    recoveredEggsElement.textContent = recoveredEggs;
 function recoverEgg() {
     recoveredEggs++;
     console.log(recoveredEggs);
@@ -323,6 +343,7 @@ function startGame() {
                     event.target.style.backgroundColor = 'red';
                     wrongOverlay.classList.remove('hidden');
                     console.log("POR ALGUNA RAZON SE ACTIVÓ...");
+                    lifeChecker()
                 }
             })
         })

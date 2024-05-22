@@ -13,6 +13,10 @@ const encodedBtnColor = urlParams.get('btn-color');
 const encodedObstacles = urlParams.get('obstacles');
 
 document.addEventListener('DOMContentLoaded', () => {
+    var recoveredEggs = localStorage.getItem("RecoveredEggs")|| 0;
+    const recoveredEggsElement = document.getElementById('recovered-eggs');
+    recoveredEggsElement.textContent = recoveredEggs;
+
 // Decodificamos los datos personalizados y los almacenamos.
     const bgColor = decodeURIComponent(encodedBgColor);
     const madrePato = "/" + decodeURIComponent(encodedMadrePato);
@@ -59,3 +63,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+

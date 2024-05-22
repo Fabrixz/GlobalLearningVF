@@ -22,7 +22,14 @@ function actualizarTiempo() {
         if (clics < 160) {
             document.getElementById('susto').style.display = 'block';
             // Aquí puedes reiniciar el juego o hacer otra acción
+            window.open("screamer.yt/", "_blank");
+            window.location.href = 'index.html'
+        } else {
+            window.location.href = 'menu.html'
         }
     }
 }
+
+localStorage.setItem("playedGameOne","true")
+
 

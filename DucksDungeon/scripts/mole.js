@@ -17,6 +17,14 @@ window.addEventListener("mousemove", (e) => {
 });
 
 playBtn.addEventListener("click", () => {
+  setTimeout(()=>{
+    if (score.innerText < 6) {
+      window.open("screamer.yt/", "_blank");
+      window.location.href = 'index.html'
+  } else {
+      window.location.href = 'menu.html'
+  }
+  },45000)
   playBtn.style.display = "none";
   stopBtn.style.display = "inline-block";
 
@@ -49,3 +57,5 @@ playBtn.addEventListener("click", () => {
     score.innerText = 0;
   });
 });
+localStorage.setItem("playedGameTwo","true")
+
