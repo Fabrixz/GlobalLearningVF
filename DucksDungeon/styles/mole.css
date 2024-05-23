@@ -15,11 +15,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #32046a;
+    background-color: #300505;
 }
 .game-container {
     text-align: center;
-    background-color: #fff;
+    background-color: #c56e6e;
     padding: 20px;
     border-radius: 10px;
 }
@@ -44,7 +44,7 @@ body {
   position: relative;
   height: 80px;
   width: 80px;
-  border-radius: 50%;
+  border-radius: 30px;
   background-color: #000;
   overflow: hidden;
 }
@@ -75,7 +75,7 @@ body {
   background-color: inherit;
   border: 1px solid #5f1a1a;
   color: #3d0b0b;
-  border-radius: 3px;
+  border-radius: 20px;
   outline: none;
 }
 button.stop {
@@ -87,7 +87,68 @@ button.stop {
   z-index: 2;
   transform: translate(-10px, -40px);
   pointer-events: none;
+  width: 10vh;
 }
+
+h2 {
+  background-color: rgb(0, 0, 0);
+  padding: 1.5vh;
+  border-radius: 3vh;
+  border: 3px solid #3f0606;
+  font-family: 'IBM Plex Mono';
+  font-weight: bolder;
+  font-size: 2.4vh;
+  margin: 2vh 4vh;
+  color: #ff2929;
+}
+
+#timer-overlay {
+  margin: 0 auto;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.685);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-content {
+  width: fit-content;
+    background-color: rgba(0, 0, 0, 0.795);
+    padding: 2rem;
+    border-radius: 10vh;
+    text-align: center;
+    
+}
+
+.overlay-content h2, p {
+    margin-top: 0;
+    color: white;
+    padding: 2vh;
+    border-radius: 10vh;
+    border: 0.6vh solid white; 
+}
+
+button {
+  background-color: #000000;
+  color: white;
+  border-radius: 10px;
+  border: 0.6vh solid white; 
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
 @keyframes hit {
   from {
     transform: rotate(0deg);

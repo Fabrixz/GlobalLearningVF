@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: linear-gradient(rgba(255, 0, 0, 0.507), rgba(0, 0, 255, 0.452));
+    display: flex;
+}
+
+#center-container {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+
+#EmpezarJuego {
+    border-style: none;
+    border-radius: 20px;
+    padding: 4vh;
+
+    background-color: blueviolet;
+    
+}
+
+
+.video-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Ensure the video stays behind content */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    margin-top: 20%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#EmpezarJuego {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #d501ff 0, blueviolet 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #ffe4f7;
+    cursor: pointer;
+    font-size: large;
+    font-family: 'IBM Plex Mono';
+    font-weight: bolder;
+}
+
+#EmpezarJuego:hover {
+    box-shadow: #ff00dd 0 0 0 1.5px inset, rgba(212, 0, 255, 0.651) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #ff00ea 0 -3px 0 inset;
+    transform: translateY(2px);
+}

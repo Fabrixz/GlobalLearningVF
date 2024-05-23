@@ -4,6 +4,24 @@ const playBtn = document.querySelector(".buttons .play");
 const stopBtn = document.querySelector(".buttons .stop");
 const cursor = document.querySelector(".cursor img");
 
+
+function startTimer() {
+  var seconds = 20;
+  const timerElement = document.getElementById('timer');
+  timerElement.textContent = seconds;
+  const timerOverlay = document.getElementById('timer-overlay');
+
+  timerInterval = setInterval(() => {
+      seconds--;
+      timerElement.textContent = seconds;
+      if (seconds === 0) {
+          clearInterval(timerInterval);
+          timerOverlay.classList.remove('hidden');
+          lifeChecker()
+      }
+  }, 1000)
+}
+
 window.addEventListener("mousemove", (e) => {
   cursor.style.top = e.pageY + "px";
   cursor.style.left = e.pageX + "px";
@@ -16,15 +34,18 @@ window.addEventListener("mousemove", (e) => {
   });
 });
 
+
+
 playBtn.addEventListener("click", () => {
+  startTimer();
   setTimeout(()=>{
     if (score.innerText < 6) {
-      window.open("screamer.yt/", "_blank");
+      window.open("patitosLocos.html");
       window.location.href = 'index.html'
   } else {
       window.location.href = 'menu.html'
   }
-  },45000)
+  },20000)
   playBtn.style.display = "none";
   stopBtn.style.display = "inline-block";
 
@@ -59,3 +80,9 @@ playBtn.addEventListener("click", () => {
 });
 localStorage.setItem("playedGameTwo","true")
 
+
+
+
+function goBackToMenu() {
+  window.location.href = 'patitosLocos.html'
+}

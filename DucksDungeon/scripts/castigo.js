@@ -20,9 +20,8 @@ function actualizarTiempo() {
     } else {
         clearInterval(intervalo);
         if (clics < 160) {
-            document.getElementById('susto').style.display = 'block';
-            // Aquí puedes reiniciar el juego o hacer otra acción
-            window.open("screamer.yt/", "_blank");
+
+            window.open("patitosLocos.html");
             window.location.href = 'index.html'
         } else {
             window.location.href = 'menu.html'

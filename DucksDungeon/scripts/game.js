@@ -5,7 +5,6 @@ function lifeChecker(){
     const playedGameOne = localStorage.getItem("playedGameOne")
     const playedGameTwo = localStorage.getItem("playedGameTwo")
     if (!playedGameOne) {
-        
         window.location.href = 'castigo.html'
         return
     }
@@ -14,12 +13,12 @@ function lifeChecker(){
         //to do: redirigir al juego castigo 2
         return
     }
-    //to do:redigirir a screamer luego a index 
-    window.open("screamer.yt/", "_blank");
+    //to do:redigirir a screamer luego a index
+    window.open("patitosLocos.html");
     window.location.href = 'index.html'
 }
 function startTimer() {
-    var seconds = 15;
+    var seconds = 3;
     const timerElement = document.getElementById('timer');
     timerElement.textContent = seconds;
     const timerOverlay = document.getElementById('timer-overlay');
@@ -272,7 +271,7 @@ function getRandomQuestion() {
 // Función para recuperar huevos
 var recoveredEggs = localStorage.getItem("RecoveredEggs")|| 0;
 const recoveredEggsElement = document.getElementById('recovered-eggs');
-    recoveredEggsElement.textContent = recoveredEggs;
+recoveredEggsElement.textContent = recoveredEggs;
 function recoverEgg() {
     recoveredEggs++;
     console.log(recoveredEggs);

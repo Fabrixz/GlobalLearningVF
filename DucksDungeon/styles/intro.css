@@ -21,8 +21,13 @@ header {
     margin-left: 4.3rem;
 }
 
+#return-egg {
+    cursor: pointer;
+}
 
-
+#return-egg:hover {
+    animation: increaseSize 0.2s forwards; 
+}
 
 #go-back {
     width: 4.2rem;
@@ -41,7 +46,7 @@ header {
     width: 90%;
     height: 81%;
     margin: 0 auto;
-    border-radius: 9px;
+    border-radius: 20px;
 }
 
 #egg {
@@ -81,6 +86,7 @@ h2 {
 h2.startGame {
     background-image: url(/DucksDungeon/assets/burbuja-texto/PLAY\ 1.svg);
     background-size: 5.5vh;
+    cursor: pointer;
 }
 
 

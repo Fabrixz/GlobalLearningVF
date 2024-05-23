@@ -10,18 +10,19 @@
 </head>
 
 <body>
+  <div id="timer-overlay" class="hidden">
+    <div class="overlay-content">
+        <h2>¡NO LO LOGRASTE!</h2>
+        <p>Ahora te toca empezar nuevamente...</p>
+        <button id="back-to-menu" onclick=goBackToMenu()>VOLVER AL MENU</button>
+    </div>
+  </div>
   <div class="game-container">
-    <img src="" alt="Imagen Superior" class="top-image">
+    <h2 class="button-color">TIEMPO RESTANTE: <span id="timer">0</span></h2>
     <div class="whack-a-mole-container">
-      <!-- Download Images from this link- https://bit.ly/2QEq5p2 -->
       <div class="container">
         <div class="heading">
-          <p>
-            Whack a Mole game using <br />
-            Vanilla JavaScript
-          </p>
-        </div>
-        <div class="score">Points: <span>0</span></div>
+        <div class="score">PUNTOS: <span>0</span></div>
         <div class="holesCont">
           <div class="hole hole1"></div>
           <div class="hole hole2"></div>
@@ -33,18 +34,18 @@
           <div class="hole hole8"></div>
           <div class="hole hole9"></div>
         </div>
+        
         <div class="buttons">
-          <button class="play">PLAY</button>
-          <button class="stop">STOP</button>
+          <button class="play">JUGAR</button>
+          <button class="stop">DETENER</button>
         </div>
+        
         <div class="cursor">
           <img src="/DucksDungeon/assets/mamas-pato/MamaPato1.svg" />
         </div>
       </div>
     </div>
-
   </div>
-
   <script src="/DucksDungeon/scripts/mole.js"></script>
 </body>
 
