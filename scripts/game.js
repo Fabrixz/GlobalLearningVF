@@ -5,11 +5,11 @@ function lifeChecker(){
     const playedGameOne = localStorage.getItem("playedGameOne")
     const playedGameTwo = localStorage.getItem("playedGameTwo")
     if (!playedGameOne) {
-        window.location.href = '/castigo.html'
+        window.location.href = 'castigo.html'
         return
     }
     if (!playedGameTwo) {
-        window.location.href = '/mole.html'
+        window.location.href = 'mole.html'
         //to do: redirigir al juego castigo 2
         return
     }
