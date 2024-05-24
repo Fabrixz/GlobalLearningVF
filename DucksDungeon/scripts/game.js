@@ -18,7 +18,7 @@ function lifeChecker(){
     window.location.href = 'index.html'
 }
 function startTimer() {
-    var seconds = 7;
+    var seconds = 70;
     const timerElement = document.getElementById('timer');
     timerElement.textContent = seconds;
     const timerOverlay = document.getElementById('timer-overlay');

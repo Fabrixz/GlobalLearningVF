@@ -211,3 +211,50 @@ footer p {
         transform: scale(1.0);
     }
 }
+
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+        width: 10rem;
+    }
+
+    #logofull {
+        position: relative;
+    }
+
+    body {
+        overflow: scroll;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container {
+        height: fit-content;
+        margin: 0 !important;
+        width: fit-content;;
+    }
+
+    .box {
+        width: 98% !important;
+    }
+
+
+
+    .boxtitle h2 {
+        margin: auto !important;
+        left: 50%;
+        width: 80%;
+    }
+
+    .sub-container {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        margin: 0;
+    }
+
+    .column-1 {
+        justify-items: center;
+        margin: 2vh;
+    }
+}

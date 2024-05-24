@@ -162,3 +162,40 @@ h2:hover {
         transform: scale(1.03) translateX(0) rotate(0deg);
     }
 }
+
+@media (max-width: 1300px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    body {
+        overflow: scroll;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+
+    .column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .container p {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    h2 {
+        width: 70%;
+    }
+
+    p {
+        width: 40% !important;
+        font-size: 3vh;
+    }
+}

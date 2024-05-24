@@ -182,3 +182,43 @@ p {
         background-color: transparent;
     }
 }
+
+@media (max-width: 1000px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    body {
+        overflow: scroll;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container nav {
+        flex-direction: column;
+        width: fit-content;
+    }
+    
+    .button-color {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+
+    .optioncontent {
+        width: fit-content;
+    }
+
+    #header {
+        display: inline-block;
+    }
+    #container {
+        height: fit-content;
+    }
+
+    .option {
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
