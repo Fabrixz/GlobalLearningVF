@@ -14,7 +14,7 @@ function lifeChecker(){
         return
     }
     //to do:redigirir a screamer luego a index
-    window.location.href = '/GlobalLearning/index.html';
+    window.location.href = '../index.html';
     window.open("patitosLocos.html");
 }
 function startTimer() {
@@ -42,7 +42,7 @@ function stopTimer() {
 
 // Funciones
 const closeOverlay = () => document.getElementById('start-overlay').style.display = 'none';
-const goBackToMenu = () => window.location.href = 'menu.html';
+const goBackToMenu = () => window.location.href = '../pages/menu.html';
 
 // Storing encoded params
 const urlParams = new URLSearchParams(window.location.search);
