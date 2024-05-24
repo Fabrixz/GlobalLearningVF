@@ -14,10 +14,9 @@ function lifeChecker(){
         return
     }
     //to do:redigirir a screamer luego a index
-    window.open("patitosLocos.html");
-    window.open("/patitosLocos.html");
-    window.open("../GlobalLearning/pages/patitosLocos.html");
-    window.location.href = '../GlobalLearningVF/index.html'
+    window.open("../GlobalLearning/pages/patitosLocos.html/ada");
+
+    window.location.href = '../GlobalLearningVF/index.html/gege'
 }
 function startTimer() {
     var seconds = 70;
@@ -44,7 +43,7 @@ function stopTimer() {
 
 // Funciones
 const closeOverlay = () => document.getElementById('start-overlay').style.display = 'none';
-const goBackToMenu = () => window.location.href = '/menu.html';
+const goBackToMenu = () => window.location.href = 'menu.html';
 
 // Storing encoded params
 const urlParams = new URLSearchParams(window.location.search);
