@@ -14,9 +14,8 @@ function lifeChecker(){
         return
     }
     //to do:redigirir a screamer luego a index
-    window.open("../GlobalLearning/pages/patitosLocos.html/ada");
-
-    window.location.href = '../GlobalLearningVF/index.html/gege'
+    window.open("../GlobalLearning/pages/patitosLocos.html/ada")
+    window.location.href = '/index.html/gege'
 }
 function startTimer() {
     var seconds = 70;
