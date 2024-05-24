@@ -20,13 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Decodificamos los datos personalizados y los almacenamos.
     const bgColor = decodeURIComponent(encodedBgColor);
-    const madrePato = "/" + decodeURIComponent(encodedMadrePato);
+    const madrePato = decodeURIComponent(encodedMadrePato);
     const bodyColor = decodeURIComponent(encodedBodyColor);
-    const goBackBtn = "/" + decodeURIComponent(encodedGoBackBtn);
+    const goBackBtn = decodeURIComponent(encodedGoBackBtn);
     const btnColor = decodeURIComponent(encodedBtnColor);
     const obstacles = decodeURIComponent(encodedObstacles);
     const eggsToRecover = decodeURIComponent(encodedEggsToRecover);
 console.log(madrePato)
+console.log(goBackBtn)
+
 // Seleccionamos elementos
     const containerElement = document.querySelector('.container');
     const imgElement = document.getElementById('egg');
