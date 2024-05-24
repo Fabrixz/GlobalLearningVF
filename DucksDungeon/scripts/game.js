@@ -18,7 +18,7 @@ function lifeChecker(){
     window.location.href = 'index.html'
 }
 function startTimer() {
-    var seconds = 3;
+    var seconds = 7;
     const timerElement = document.getElementById('timer');
     timerElement.textContent = seconds;
     const timerOverlay = document.getElementById('timer-overlay');
@@ -247,7 +247,71 @@ const questions = [
             {text: ["Basados en habilidades manuales", false]},
             {text: ["Con alta remuneración", false]},
         ]
-    }]
+    },
+    {
+        question: "¿Qué científico propuso la teoría de la relatividad?",
+        answers: [
+        {text: ["Isaac Newton", false]},
+        {text: ["Albert Einstein", true]},
+        {text: ["Galileo Galilei", false]},
+        {text: ["Nikola Tesla", false]}
+        ]
+        },
+        {
+        question: "¿Qué tipo de animal es un delfín?",
+        answers: [
+        {text: ["Pez", false]},
+        {text: ["Mamífero", true]},
+        {text: ["Reptil", false]},
+        {text: ["Anfibio", false]}
+        ]
+        },
+        {
+        question: "¿Cuál es el órgano más grande del cuerpo humano?",
+        answers: [
+        {text: ["Hígado", false]},
+        {text: ["Corazón", false]},
+        {text: ["Pulmones", false]},
+        {text: ["Piel", true]}
+        ]
+        },
+        {
+        question: "¿Qué elemento tiene el símbolo químico 'Fe'?",
+        answers: [
+        {text: ["Fósforo", false]},
+        {text: ["Flúor", false]},
+        {text: ["Hierro", true]},
+        {text: ["Francio", false]}
+        ]
+        },
+        {
+        question: "¿Cuál es la velocidad de la luz?",
+        answers: [
+        {text: ["300,000 km/s", true]},
+        {text: ["150,000 km/s", false]},
+        {text: ["450,000 km/s", false]},
+        {text: ["600,000 km/s", false]}
+        ]
+        },
+        {
+        question: "¿Cuál es el planeta más grande del sistema solar?",
+        answers: [
+        {text: ["Marte", false]},
+        {text: ["Júpiter", true]},
+        {text: ["Saturno", false]},
+        {text: ["Neptuno", false]}
+        ]
+        },
+        {
+        question: "¿Cuál es el océano más grande del mundo?",
+        answers: [
+        {text: ["Atlántico", false]},
+        {text: ["Índico", false]},
+        {text: ["Ártico", false]},
+        {text: ["Pacífico", true]}
+        ]
+        }
+]
 
     
 // Funcion para obtener una pregunta aleatoria
@@ -271,7 +335,7 @@ function getRandomQuestion() {
 // Función para recuperar huevos
 var recoveredEggs = localStorage.getItem("RecoveredEggs")|| 0;
 const recoveredEggsElement = document.getElementById('recovered-eggs');
-recoveredEggsElement.textContent = recoveredEggs;
+    recoveredEggsElement.textContent = recoveredEggs;
 function recoverEgg() {
     recoveredEggs++;
     console.log(recoveredEggs);
@@ -341,7 +405,6 @@ function startGame() {
                     stopTimer();
                     event.target.style.backgroundColor = 'red';
                     wrongOverlay.classList.remove('hidden');
-                    console.log("POR ALGUNA RAZON SE ACTIVÓ...");
                     lifeChecker()
                 }
             })

@@ -1,5 +1,5 @@
 let clics = 0;
-let tiempo = 25;
+let tiempo = 14;
 let intervalo;
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function contarClics() {
-    if (clics < 160 && tiempo > 0) {
+    if (clics < 100 && tiempo > 0) {
         clics++;
         document.getElementById('contadorClics').innerText = clics;
     }
