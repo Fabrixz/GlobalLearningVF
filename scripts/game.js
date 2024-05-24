@@ -5,16 +5,16 @@ function lifeChecker(){
     const playedGameOne = localStorage.getItem("playedGameOne")
     const playedGameTwo = localStorage.getItem("playedGameTwo")
     if (!playedGameOne) {
-        window.location.href = '/pages/castigo.html'
+        window.location.href = 'GlobalLearningVF/pages/castigo.html'
         return
     }
     if (!playedGameTwo) {
-        window.location.href = '/pages/mole.html'
+        window.location.href = 'GlobalLearningVF/pages/mole.html'
         //to do: redirigir al juego castigo 2
         return
     }
     //to do:redigirir a screamer luego a index
-    window.open("/pages/patitosLocos.html");
+    window.open("GlobalLearningVF/pages/patitosLocos.html");
     window.location.href = '../index.html'
 }
 function startTimer() {
