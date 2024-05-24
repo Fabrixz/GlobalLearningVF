@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnColor = decodeURIComponent(encodedBtnColor);
     const obstacles = decodeURIComponent(encodedObstacles);
     const eggsToRecover = decodeURIComponent(encodedEggsToRecover);
-
+console.log(madrePato)
 // Seleccionamos elementos
     const containerElement = document.querySelector('.container');
     const imgElement = document.getElementById('egg');
