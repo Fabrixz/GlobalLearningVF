@@ -20,10 +20,10 @@ function actualizarTiempo() {
     } else {
         clearInterval(intervalo);
         if (clics < 160) {
-            window.open("patitosLocos.html");
-            window.location.href = 'index.html'
+            window.open("../patitosLocos.html");
+            window.location.href = '../../index.html'
         } else {
-            window.location.href = 'pages/menu.html'
+            window.location.href = '../menu.html'
         }
     }
 }
