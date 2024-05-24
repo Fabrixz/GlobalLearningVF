@@ -6,7 +6,7 @@ function redirectToIntro(bgColor, madrePato, bodyColor, goBackBtn, btnColor, obs
     const encodedBtnColor = encodeURIComponent(btnColor);
     const encodedObstacles = encodeURIComponent(obstacles);
     const encodedEggsToRecover = encodeURIComponent(eggsToRecover);
-    window.location.href = `../intro.html?bg-color=${encodedBgColor}&madre-pato=${encodedMadrePato}&body-color=${encodedBodyColor}&go-back-btn=${encodedGoBackBtn}&btn-color=${encodedBtnColor}&obstacles=${encodedObstacles}&eggs-to-recover=${encodedEggsToRecover}`;
+    window.location.href = `intro.html?bg-color=${encodedBgColor}&madre-pato=${encodedMadrePato}&body-color=${encodedBodyColor}&go-back-btn=${encodedGoBackBtn}&btn-color=${encodedBtnColor}&obstacles=${encodedObstacles}&eggs-to-recover=${encodedEggsToRecover}`;
 }
 
 const username = localStorage.getItem('username')

@@ -77,7 +77,7 @@ document.getElementById('return-egg').addEventListener('click', function() {
             const headerColor = encodeURIComponent(bodyColor)
             const btnGame = encodeURIComponent(btnColor)
             const obstaclesNum = encodeURIComponent(obstacles)
-            window.location.href = `pages/game.html?&div-color=${divColor}&header-color=${headerColor}&btn-color=${btnGame}&obstacles=${obstaclesNum}`;
+            window.location.href = `game.html?&div-color=${divColor}&header-color=${headerColor}&btn-color=${btnGame}&obstacles=${obstaclesNum}`;
         })
     }
 
