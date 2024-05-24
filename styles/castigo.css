@@ -62,7 +62,7 @@ body {
     height: 200px;
     background-color: rgba(67, 6, 180, 0.459);
     border-radius: 50px;
-    background-image: url(/assets/go-back-button/mouse.svg);
+    background-image: url(assets/go-back-button/mouse.svg);
     background-size: 20vh;
     background-repeat: no-repeat;
     background-position: center;

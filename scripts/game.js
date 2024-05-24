@@ -5,17 +5,17 @@ function lifeChecker(){
     const playedGameOne = localStorage.getItem("playedGameOne")
     const playedGameTwo = localStorage.getItem("playedGameTwo")
     if (!playedGameOne) {
-        window.location.href = '/pages/castigo.html'
+        window.location.href = 'pages/castigo.html'
         return
     }
     if (!playedGameTwo) {
-        window.location.href = '/pages/mole.html'
+        window.location.href = 'pages/mole.html'
         //to do: redirigir al juego castigo 2
         return
     }
     //to do:redigirir a screamer luego a index
-    window.open("/pages/patitosLocos.html");
-    window.location.href = '/pages/index.html'
+    window.open("pages/patitosLocos.html");
+    window.location.href = 'pages/index.html'
 }
 function startTimer() {
     var seconds = 70;
@@ -42,7 +42,7 @@ function stopTimer() {
 
 // Funciones
 const closeOverlay = () => document.getElementById('start-overlay').style.display = 'none';
-const goBackToMenu = () => window.location.href = '/pages/menu.html';
+const goBackToMenu = () => window.location.href = 'pages/menu.html';
 
 // Storing encoded params
 const urlParams = new URLSearchParams(window.location.search);
