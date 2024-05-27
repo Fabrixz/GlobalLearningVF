@@ -14,7 +14,7 @@ const encodedObstacles = urlParams.get('obstacles');
 const encodedEggsToRecover = urlParams.get('eggs-to-recover');
 
 document.addEventListener('DOMContentLoaded', () => {
-    var recoveredEggs = localStorage.getItem("RecoveredEggs")|| 0;
+    var recoveredEggs = localStorage.getItem("RecoveredEggs") || 0;
     const recoveredEggsElement = document.getElementById('recovered-eggs');
     recoveredEggsElement.textContent = recoveredEggs;
 
@@ -84,5 +84,3 @@ document.getElementById('return-egg').addEventListener('click', function() {
     }
 
 });
-
-

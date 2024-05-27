@@ -14,11 +14,11 @@ function lifeChecker(){
         return
     }
     //to do:redigirir a screamer luego a index
-    window.location.href = '../index.html';
+    window.location.href = 'index.html';
     window.open("patitosLocos.html");
 }
 function startTimer() {
-    var seconds = 70;
+    var seconds = 7;
     const timerElement = document.getElementById('timer');
     timerElement.textContent = seconds;
     const timerOverlay = document.getElementById('timer-overlay');
