@@ -40,10 +40,10 @@ playBtn.addEventListener("click", () => {
   startTimer();
   setTimeout(()=>{
     if (score.innerText < 6) {
-      window.open("patitosLocos.html");
-      window.location.href = 'index.html'
+      window.open("/pages/patitosLocos.html");
+      window.location.href = 'pages/index.html'
   } else {
-      window.location.href = 'menu.html'
+      window.location.href = 'pages/menu.html'
   }
   },20000)
   playBtn.style.display = "none";
@@ -84,5 +84,5 @@ localStorage.setItem("playedGameTwo","true")
 
 
 function goBackToMenu() {
-  window.location.href = 'patitosLocos.html'
+  window.location.href = 'pages/patitosLocos.html'
 }

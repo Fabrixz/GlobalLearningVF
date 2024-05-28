@@ -14,18 +14,20 @@ const encodedObstacles = urlParams.get('obstacles');
 const encodedEggsToRecover = urlParams.get('eggs-to-recover');
 
 document.addEventListener('DOMContentLoaded', () => {
-    var recoveredEggs = localStorage.getItem("RecoveredEggs")|| 0;
+    var recoveredEggs = localStorage.getItem("RecoveredEggs") || 0;
     const recoveredEggsElement = document.getElementById('recovered-eggs');
     recoveredEggsElement.textContent = recoveredEggs;
 
 // Decodificamos los datos personalizados y los almacenamos.
     const bgColor = decodeURIComponent(encodedBgColor);
-    const madrePato = "/" + decodeURIComponent(encodedMadrePato);
+    const madrePato = decodeURIComponent(encodedMadrePato);
     const bodyColor = decodeURIComponent(encodedBodyColor);
-    const goBackBtn = "/" + decodeURIComponent(encodedGoBackBtn);
+    const goBackBtn = decodeURIComponent(encodedGoBackBtn);
     const btnColor = decodeURIComponent(encodedBtnColor);
     const obstacles = decodeURIComponent(encodedObstacles);
     const eggsToRecover = decodeURIComponent(encodedEggsToRecover);
+console.log(madrePato)
+console.log(goBackBtn)
 
 // Seleccionamos elementos
     const containerElement = document.querySelector('.container');
@@ -82,5 +84,3 @@ document.getElementById('return-egg').addEventListener('click', function() {
     }
 
 });
-
-
