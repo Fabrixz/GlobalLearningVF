@@ -19,9 +19,9 @@ function actualizarTiempo() {
         document.getElementById('contadorTiempo').innerText = tiempo;
     } else {
         clearInterval(intervalo);
-        if (clics < 160) {
+        if (clics < 100) {
             window.open("../patitosLocos.html");
-            window.location.href = '../../index.html'
+            window.location.href = '../index.html'
         } else {
             window.location.href = '../menu.html'
         }
