@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function contarClics() {
-    if (clics < 100 && tiempo > 0) {
+    if (clics < 25 && tiempo > 0) {
         clics++;
         document.getElementById('contadorClics').innerText = clics;
     }
