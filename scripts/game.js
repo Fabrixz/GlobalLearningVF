@@ -18,7 +18,7 @@ function lifeChecker(){
     window.open("patitosLocos.html");
 }
 function startTimer() {
-    var seconds = 7;
+    var seconds = 25;
     const timerElement = document.getElementById('timer');
     timerElement.textContent = seconds;
     const timerOverlay = document.getElementById('timer-overlay');
