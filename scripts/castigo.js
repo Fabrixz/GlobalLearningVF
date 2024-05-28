@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function contarClics() {
-    if (clics < 100 && tiempo > 0) {
+    if (clics <100 && tiempo > 0) {
         clics++;
         document.getElementById('contadorClics').innerText = clics;
     }
@@ -19,7 +19,7 @@ function actualizarTiempo() {
         document.getElementById('contadorTiempo').innerText = tiempo;
     } else {
         clearInterval(intervalo);
-        if (clics < 100) {
+        if (clics <100) {
             window.open("../patitosLocos.html");
             window.location.href = '../index.html'
         } else {
