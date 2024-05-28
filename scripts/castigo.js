@@ -23,7 +23,7 @@ function actualizarTiempo() {
             window.open("../patitosLocos.html");
             window.location.href = '../index.html'
         } else {
-            window.location.href = './menu.html'
+            window.location.href = 'menu.html'
         }
     }
 }
