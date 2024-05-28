@@ -40,10 +40,10 @@ playBtn.addEventListener("click", () => {
   startTimer();
   setTimeout(()=>{
     if (score.innerText < 6) {
-      window.open("/pages/patitosLocos.html");
-      window.location.href = 'pages/index.html'
+      window.open("../patitosLocos.html");
+      window.location.href = '../index.html'
   } else {
-      window.location.href = 'pages/menu.html'
+      window.location.href = 'menu.html'
   }
   },20000)
   playBtn.style.display = "none";
